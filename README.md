@@ -1,55 +1,24 @@
-# Docker + Lumen with Nginx and MySQL
+# Lumen PHP Framework
 
+[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
+[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-This setup is great for writing quick apps in PHP using Lumen from an any Docker client. It uses docker-compose to setup the application services.
+Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Clone this repo
+## Official Documentation
 
-```bash
-git clone https://github.com/saada/docker-lumen.git
-cd docker-lumen
-```
+Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Create Lumen App
+## Contributing
 
-now, create the app in the `images\php` directory named `app`
+Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-```bash
-cd images/php
-docker run --rm -it -v $(pwd):/app saada/lumen-cli lumen new app
-```
+## Security Vulnerabilities
 
-### Configuration
+If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-To change configuration values, look in the `docker-compose.yml` file and change the `php` container's environment variables. These directly correlate to the Lumen environment variables.
+## License
 
-## Docker Setup
-
-### [Docker for Mac](https://docs.docker.com/docker-for-mac/)
-
-### [Docker for Windows](https://docs.docker.com/docker-for-windows/)
-
-### [Docker for Linux](https://docs.docker.com/engine/installation/linux/)
-
-### Build & Run
-
-```bash
-docker-compose up --build -d
-```
-
-Navigate to [http://localhost:80](http://localhost:80) and you should see something like this
-
-
-Success! You can now start developing your Lumen app on your host machine and you should see your changes on refresh! Classic PHP development cycle. A good place to start is `images/php/app/routes/web.php`.
-
-Feel free to configure the default port 80 in `docker-compose.yml` to whatever you like.
-
-### Stop Everything
-
-```bash
-docker-compose down
-```
-
-## Contribute
-
-Submit a Pull Request!
+The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
