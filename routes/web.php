@@ -14,9 +14,16 @@
 use GuzzleHttp\Client;
 
 const ENDPOINT = 'https://api.github.com/user';
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/healthcheck', function () use ($router) {
+    return ['message' => 'application is up and running',
+            'success' => true];
+});
+
 
 $router->get('/show', function () use ($router) {
     $client = new Client();
